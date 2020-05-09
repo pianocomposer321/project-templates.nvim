@@ -19,3 +19,9 @@ Then run `:UpdateRempotePlugins` and restart Neovim.
 - `:LoadTemplate` - Load a template into a new project
 - `:DeleteTemplate` - Delete a template
 - `:SaveAsTemplate` - Save the current folder and all files and subfolders as a new template
+
+# Credits
+
+Finder.vim - https://vim.fandom.com/wiki/Implement_your_own_interactive_finder_without_plugins
+
+Inspiration - [This](https://github.com/bit101/ProjectMaker) Sublime text plugin and [this](https://github.com/cantonios/vscode-project-templates) VS Code Extension
