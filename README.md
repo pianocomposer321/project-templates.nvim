@@ -12,7 +12,7 @@ Add this to your init.vim:
 
 etc.
 
-Then run `"PlugInstall` (vim-plug) or `PluginInstall` (Vundle)
+Then run `"PlugInstall` (vim-plug) or `PluginInstall` (Vundle).
 
 Finally, run `:UpdateRempotePlugins` and restart Neovim.
 
