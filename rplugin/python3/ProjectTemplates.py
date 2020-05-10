@@ -4,10 +4,6 @@ import os
 import shutil
 from binaryornot.check import is_binary
 
-class vim_standin():
-    def out_write(self, toprint):
-        print(toprint, end='')
-
 @pynvim.plugin
 class ProjectTemplate(object):
     def __init__(self, vim):
