@@ -18,7 +18,7 @@ Finally, run `:UpdateRempotePlugins` and restart Neovim.
 
 # Usage
 
-- `:LoadTemplate` - Load a template into a new project. The plugin will look for placeholders (e.g. #{PLACEHOLDER}), and ask for values to replace them in each non-binary file
+- `:LoadTemplate` - Load a template into a new project. The plugin will look for placeholders (e.g. `#{PLACEHOLDER}`), and ask for values to replace them in each non-binary file
 - `:DeleteTemplate` - Delete a template
 - `:SaveAsTemplate` - Save the current folder and all files and subfolders as a new template
 
