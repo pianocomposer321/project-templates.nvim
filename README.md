@@ -5,10 +5,10 @@ A neovim project management plugin.
 Add this to your init.vim:
 
 - vim-plug:
-  - `Plug pianocomposer321/project-templates.nvim'`
+  - `Plug 'pianocomposer321/project-templates.nvim'`
   
 - Vundle:
-  - `Plugin pianocomposer321/project-templates.nvim'`
+  - `Plugin 'pianocomposer321/project-templates.nvim'`
 
 etc.
 
