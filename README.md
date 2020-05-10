@@ -8,7 +8,7 @@ Add this to your init.vim:
   - `Plug 'pianocomposer321/project-templates.nvim', { 'do': 'pip install binaryornot' }`
   
 - Vundle:
-  - `Plugin 'pianocomposer321/project-templates.nvim'`
+  - `Plugin 'pianocomposer321/project-templates.nvim', { 'do': 'pip install binaryornot' }`
 
 etc.
 
