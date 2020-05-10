@@ -14,7 +14,7 @@ class ProjectTemplate(object):
         self.tokens = []
         self.token_values = []
 
-        if not os.isdir(self.projectDir):
+        if not os.path.isdir(self.projectDir):
             os.mkdir(self.projectDir)
 
     @pynvim.command("LoadTemplate", sync=True)
