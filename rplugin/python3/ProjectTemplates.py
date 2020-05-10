@@ -12,11 +12,14 @@ class vim_standin():
 class ProjectTemplate(object):
     def __init__(self, vim):
         self.vim = vim
-        self.projectDir = f"{os.path.expanduser('~')}\\.templates"
+        self.projectDir = f"{os.path.expanduser('~')}/.templates"
         self.projects = {}
         self.tokenized_files = []
         self.tokens = []
         self.token_values = []
+
+        if not os.isdir(self.projectDir):
+            os.mkdir(self.projectDir)
 
     @pynvim.command("LoadTemplate", sync=True)
     def loadTemplate(self):
