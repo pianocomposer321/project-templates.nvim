@@ -26,4 +26,4 @@ Finally, run `:UpdateRempotePlugins` and restart Neovim.
 
 Finder.vim - https://vim.fandom.com/wiki/Implement_your_own_interactive_finder_without_plugins
 
-Inspiration - [This](https://github.com/bit101/ProjectMaker) Sublime text plugin and [this](https://github.com/cantonios/vscode-project-templates) VS Code Extension
+Inspired by [This](https://github.com/bit101/ProjectMaker) Sublime text plugin and [this](https://github.com/cantonios/vscode-project-templates) VS Code Extension
