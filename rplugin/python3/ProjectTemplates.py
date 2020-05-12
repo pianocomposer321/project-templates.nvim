@@ -100,7 +100,7 @@ class ProjectTemplate(object):
         template_name = self.vim.eval('input("Enter the name of the new template> ")')
 
         # shutil.copytree(pwd, self.projectDir + os.sep() + template_name)
-        shutil.copytree(pwd, self.projectDir)
+        shutil.copytree(pwd, f'{self.projectDir}/{template_name}')
 
 
         self.vim.command("redraw | echo")
