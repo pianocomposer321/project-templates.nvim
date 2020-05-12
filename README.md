@@ -12,10 +12,10 @@ You will need neovim compiled with python3 support. To determine whether or not 
 Add this to your init.vim:
 
 - vim-plug:
-  - `Plug 'pianocomposer321/project-templates.nvim', { 'do': 'pip install binaryornot' }`
+  - `Plug 'pianocomposer321/project-templates.nvim', { 'do': 'pip3 install binaryornot' }`
   
 - Vundle:
-  - `Plugin 'pianocomposer321/project-templates.nvim', { 'do': 'pip install binaryornot' }`
+  - `Plugin 'pianocomposer321/project-templates.nvim', { 'do': 'pip3 install binaryornot' }`
 
 etc.
 
