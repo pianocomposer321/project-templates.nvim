@@ -7,6 +7,7 @@ A neovim project management plugin.
 
 You will need neovim compiled with python3 support. To determine whether or not your neovim has python support, type `:echo has('python3')` and press enter. If it outputs `1`, you have python3 support, otherwise you will need to rebuild neovim with python support.
 
+
 ## Installation
 
 Add this to your init.vim:
