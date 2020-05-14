@@ -18,7 +18,7 @@ Add this to your init.vim:
 - Vundle:
   - `Plugin 'pianocomposer321/project-templates.nvim', { 'do': 'pip3 install binaryornot' }`
 
-etc.
+etc, etc.
 
 Then run `:PlugInstall` (vim-plug) or `:PluginInstall` (Vundle).
 
