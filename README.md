@@ -5,7 +5,9 @@ A neovim project management plugin.
 
 ## Requirements
 
-You will need neovim compiled with python3 support. To determine whether or not your neovim has python support, type `:echo has('python3')` and press enter. If it outputs `1`, you have python3 support, otherwise you will need to rebuild neovim with python support.
+You will need neovim compiled with python3 support. To determine whether or not your neovim has python support, type `:echo has('python3')` and press enter. If it outputs `1`, you have python3 support, otherwise you will need to run the command `pip install pynvim`.
+
+You will also need to run the command `pip install binaryornot`.
 
 
 ## Installation
@@ -13,16 +15,16 @@ You will need neovim compiled with python3 support. To determine whether or not 
 Add this to your init.vim:
 
 - vim-plug:
-  - `Plug 'pianocomposer321/project-templates.nvim', { 'do': 'pip3 install binaryornot' }`
-  
+  - `Plug 'pianocomposer321/project-templates.nvim', { 'do': ':UpdateRemotePlugins' }`
+ 
 - Vundle:
-  - `Plugin 'pianocomposer321/project-templates.nvim', { 'do': 'pip3 install binaryornot' }`
+  - `Plugin 'pianocomposer321/project-templates.nvim', { 'do':  ':UpdateRemotePlugins'}`
 
 etc, etc.
 
 Then run `:PlugInstall` (vim-plug) or `:PluginInstall` (Vundle).
 
-Finally, run `:UpdateRempotePlugins` and restart Neovim.
+Finally, restart Neovim.
 
 # Usage
 
