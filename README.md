@@ -1,6 +1,9 @@
 # project-templates.nvim
 A neovim project management plugin.
 
+## Demo:
+![](demo.gif)
+
 # Quick Start
 
 ## Requirements
