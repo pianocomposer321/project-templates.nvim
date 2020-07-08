@@ -36,7 +36,7 @@ Finally, restart Neovim.
 - `:DeleteTemplate` - Delete a template
 - `:SaveAsTemplate` - Save the current folder and all files and subfolders as a new template
 
-The plugin will look for templates in ~/.templates. Sample templates can be found at https://github.com/pianocomposer321/project-template-samples. If you want to create your own templates, simply create a new project, add the placeholders you want, and save it in ~/.templates.
+The plugin will look for templates in ~/.templates. Sample templates can be found at https://github.com/pianocomposer321/project-template-samples. If you want to create your own templates, simply create a new project, add the placeholders you want, and save it in ~/.templates, or use the `:SaveAsTemplate` command.
 
 # Credits
 
