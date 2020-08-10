@@ -10,10 +10,15 @@ set shortmess=aoO
 badd +1 doc/project-templates.txt
 badd +192 ~/.config/nvim/init.vim
 badd +7 rplugin/python3/ProjectTemplates.py
+badd +0 ~/.config/nvim/plugged/nerdtree/doc/NERDTree.txt
 argglobal
 %argdel
 edit doc/project-templates.txt
 set splitbelow splitright
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
@@ -21,12 +26,14 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
+exe '1resize ' . ((&lines * 51 + 32) / 65)
+exe '2resize ' . ((&lines * 10 + 32) / 65)
 argglobal
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=99
+setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
@@ -44,31 +51,7 @@ normal! zo
 normal! zo
 2
 normal! zo
-12
-normal! zo
-13
-normal! zo
-13
-normal! zo
-13
-normal! zo
-18
-normal! zo
-18
-normal! zo
-18
-normal! zo
-18
-normal! zo
-18
-normal! zo
-18
-normal! zo
-18
-normal! zo
-18
-normal! zo
-18
+2
 normal! zo
 12
 normal! zo
@@ -76,8 +59,6 @@ normal! zo
 normal! zo
 13
 normal! zo
-13
-normal! zo
 18
 normal! zo
 18
@@ -96,21 +77,29 @@ normal! zo
 normal! zo
 18
 normal! zo
-37
+18
 normal! zo
-37
-normal! zc
-89
-normal! zc
-104
-normal! zc
-let s:l = 127 - ((102 * winheight(0) + 31) / 63)
+let s:l = 22 - ((17 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-127
-normal! 062|
-tabnew
+22
+normal! 013|
+wincmd w
+argglobal
+enew
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+wincmd w
+exe '1resize ' . ((&lines * 51 + 32) / 65)
+exe '2resize ' . ((&lines * 10 + 32) / 65)
+tabedit ~/.config/nvim/plugged/nerdtree/doc/NERDTree.txt
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -120,10 +109,6 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-if bufexists("~/.config/nvim/plugged/nerdtree/doc/NERDTree.txt") | buffer ~/.config/nvim/plugged/nerdtree/doc/NERDTree.txt | else | edit ~/.config/nvim/plugged/nerdtree/doc/NERDTree.txt | endif
-if &buftype ==# 'terminal'
-  silent file ~/.config/nvim/plugged/nerdtree/doc/NERDTree.txt
-endif
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -133,7 +118,7 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 silent! normal! zE
-let s:l = 55 - ((0 * winheight(0) + 31) / 63)
+let s:l = 55 - ((0 * winheight(0) + 31) / 62)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -161,7 +146,7 @@ setlocal fen
 normal! zo
 99
 normal! zo
-let s:l = 99 - ((98 * winheight(0) + 31) / 63)
+let s:l = 99 - ((98 * winheight(0) + 31) / 62)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
