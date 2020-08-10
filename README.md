@@ -42,4 +42,4 @@ The plugin will look for templates in ~/.templates. Sample templates can be foun
 
 Finder.vim - https://vim.fandom.com/wiki/Implement_your_own_interactive_finder_without_plugins
 
-Inspired by [This](https://github.com/bit101/ProjectMaker) Sublime text plugin and [this](https://github.com/cantonios/vscode-project-templates) VS Code Extension.
+Inspired by [this](https://github.com/bit101/ProjectMaker) Sublime text plugin and [this](https://github.com/cantonios/vscode-project-templates) VS Code Extension.
