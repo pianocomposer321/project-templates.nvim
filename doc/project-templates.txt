@@ -1,0 +1,144 @@
+*project-templates.txt* a neovim project management plugin
+                                  _           _          ~
+                                 (_)         | |         ~
+                  _ __  _ __ ___  _  ___  ___| |_        ~
+                 | '_ \| '__/ _ \| |/ _ \/ __| __|       ~
+                 | |_) | | | (_) | |  __/ (__| |_        ~
+            _    | .__/|_|  \___/| |\___|\___|\__|       ~
+           | |   | |            _/ | |     | |           ~
+           | |_ _|_|_ __ ___  _|__/| | __ _| |_ ___  ___ ~
+           | __/ _ \ '_ ` _ \| '_ \| |/ _` | __/ _ \/ __|~
+           | ||  __/ | | | | | |_) | | (_| | ||  __/\__ \~
+            \__\___|_| |_| |_| .__/|_|\__,_|\__\___||___/~
+                             | |(_)                      ~
+                      _ ____ |_|__ _ __ ___              ~
+                     | '_ \ \ / / | '_ ` _ \             ~
+                    _| | | \ V /| | | | | | |            ~
+                   (_)_| |_|\_/ |_|_| |_| |_|            ~
+                                                         ~
+                                                         ~
+
+CONTENTS                                            *project-templates-contents*
+==============================================================================
+
+    1. Usage ......................................... |project-templates-usage|
+    2. License ..................................... |project-templates-license|
+    3. Contributing ........................... |project-templates-contributing|
+    4. Bugs ........................................... |project-templates-bugs|
+    5. Credits ..................................... |project-templates-credits|
+
+
+1. Usage                                               *project-templates-usage*
+==============================================================================
+
+Loading Templates                                                *:LoadTemplate*
+------------------------------------------------------------------------------
+
+    The |:LoadTemplate| command looks in the ~/.templates folder for a
+    template and loads it. A template consists of a folder with template
+    files and/or subfolders (which can contain more files and subfolders). An
+    example template file structure for a C++ project would be:
+
+    ~/.templates/C++_Hello_World/ ~
+    ├── Makefile ~
+    ├── bin/ ~
+    └── src/ ~
+        └── main.cpp ~
+
+    With this file structure, the template would show up in the list as
+    "C++_Hello_World" in the plugin list, and the folders "bin" and "src"
+    as well as the files "Makefile" and "main.cpp" would be copied into
+    their correct locations in the new project.
+
+    Another feature of this command is the replacement of placeholders in each
+    file. For example, say the contents of src/main.cpp was the following:
+
+    #include <iostream>~
+
+    int main() {~
+        std::cout << "Hello, #{NAME}!" << std::endl;~
+    }~
+
+    When you run |:LoadTemplate| and choose "C++_Hello_World" from the list,
+    it will prompt you for the value of the #{NAME} placeholder. After you
+    enter a value, every occurrence of #{NAME} in every file will be replaced
+    by that value. So the above text would become
+
+    #include <iostream>~
+
+    int main() {~
+        std::cout << "Hello, pianocomposer321!" << std::endl;~
+    }~
+
+    with an input of "pianocomposer321".
+
+    If you also had a file "main.h" with the following contents:
+
+    const char[] name = "#{NAME}";~
+
+    then #{NAME} in that file would be replaced with the same thing as in
+    main.cpp.
+
+    You can have as many different placeholders as you want, and you can have
+    as many instances of the same placeholder as you want.
+
+
+Creating/Saving Templates                                      *:SaveAsTemplate*
+------------------------------------------------------------------------------
+
+    To create a template, you can either run the |:SaveAsTemplate| Command to
+    save the current working directory as a new template, or you can simply
+    create a new folder directly in the ~/.templates directory.
+
+    To modify an existing template, simply edit the files in the template
+    directory.
+
+    NOTE: Do not use the |:SaveAsTemplate| command to change an existing
+    template, or it will result in an error. A fix for this is in the works.
+    See |project-template-bugs|.
+
+
+Removing Templates                                             *:DeleteTemplate*
+------------------------------------------------------------------------------
+
+    To delete a template, you can simply delete the folder within
+    ~/.templates, or you can run the |:DeleteTemplate| command, which will
+    prompt you for the name of the template to delete, and then remove it for
+    you.
+
+2. License                                           *project-templates-license*
+==============================================================================
+
+    project-templates.nvim is licensed under the MIT license. More info at
+    https://en.wikipedia.org/wiki/MIT_License.
+
+
+3. Contributing                                 *project-templates-contributing*
+==============================================================================
+
+    Pull Requests are welcome, and should be submitted at the project's GitHub
+    repo at https://github.com/pianocomposer321/project-templates.nvim/pulls.
+
+
+4. Bugs                                                 *project-templates-bugs*
+==============================================================================
+
+    Known bugs include:
+    Running |:SaveAsTemplate| on an existing template results in an error.
+
+    Submit bug reports to
+    https://github.com/pianocomposer321/project-templates.nvim/issues.
+
+
+5. Credits                                           *project-templates-credits*
+==============================================================================
+
+    Inspiration for this plugin came from the following Sublime Text 3 plugin
+    and VS Code extensions:
+
+    https://github.com/bit101/ProjectMaker
+    https://github.com/cantonios/vscode-project-templates
+
+    Finder.vim, the script that handels selecting plugins in |:LoadTemplate|
+    and |:DeleteTemplate| came from the following website:
+    https://vim.fandom.com/wiki/Implement_your_own_interactive_finder_without_plugins.
