@@ -95,7 +95,7 @@ Creating/Saving Templates                                      *:SaveAsTemplate*
 
     NOTE: Do not use the |:SaveAsTemplate| command to change an existing
     template, or it will result in an error. A fix for this is in the works.
-    See |project-template-bugs|.
+    See |project-templates-bugs|.
 
 
 Removing Templates                                             *:DeleteTemplate*
